@@ -5,37 +5,34 @@ import random
 
 
 def RollDice():
-
-    print("""
     
-    =================== 
-    -----ROLL DICE-----
-    ===================
-    
-    """)
+    while True:   
 
 
-    times = input("How many times you want to roll? (ex:1)")
-    diceNumber = input("What value you want to roll) (ex:6)")
-    
+        print("""
+        ===================
+          --ROLL A DICE--
+        ===================    
+              by Edro
+            ===========
+        """)
 
-    while times not in [1,2,3,4,5,6,7,8,9,0,"d"]:
 
-        print("Thats not a Dice")
-        print("You should input the dice like this (1d20)")
-        times = input("How many times you want to roll? (ex:1)")
+        user_input = input("Roll a dice : ")
+        rolls = int(user_input.split("d")[0])
+        range_value = int(user_input.split("d")[1])
+        result = 0
+        for x in range(0, rolls):
+
+            temp_result = random.randrange(0, range_value)
+            result += temp_result   
+            print(temp_result)
+
         
-    while diceNumber not in [1,2,3,4,5,6,7,8,9,0,"d"]:
-
-        print("Thats not a Dice")
-        print("You should input the dice like this (1d20)")
-        diceNumber = input("What value you want to roll) (ex:6)")
+        print(f"{user_input} = {result}")
             
-    dice = random.randrange(diceNumber, diceNumber)
+     
 
-
-    pass
-
-
+        
 
 RollDice()
