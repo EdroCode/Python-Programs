@@ -1,4 +1,0 @@
-import EdroBot
-
-if __name__ == "__main__":
-    EdroBot.run_discord_bot()
