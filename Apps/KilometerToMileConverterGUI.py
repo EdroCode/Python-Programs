@@ -3,7 +3,7 @@ from tkinter import *
 
 
 root = Tk()
-root.geometry("300x30")
+root.geometry("300x50")
 root.title("Mile Converter")
 
 mile = 0.62137119
@@ -45,17 +45,20 @@ def convert():
 
 
 conver_button = Button(root, text="Convert", command=convert)
-conver_button.grid(row=1, column=3)
+conver_button.grid(row=2, column=3)
 
 initial_value = Entry(root)
-initial_value.grid(row=1, column=2)
+initial_value.grid(row=2, column=2)
 
 last_value = Label(root, text="", background="#FFFFFF", width=20)
-last_value.grid(row=1, column=4)
+last_value.grid(row=2, column=4)
 
 
 km_label = Label(root, text="Km")
+km_label.grid(row=1,column=2)
+
 mile_label = Label(root, text="Mile")
+mile_label.grid(row=1,column=4)
 
 
 
